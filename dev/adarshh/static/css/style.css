@@ -1,0 +1,400 @@
+*{
+    font-family: "Fondamento", cursive;
+    font-weight: 400;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    scroll-behavior: smooth;
+}
+:root{
+    --bg-color:black;
+    --text-color:white;
+    --primary-color:rgb(33, 33, 33);
+}
+body{
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family:"Sofia", sans-serif;
+    
+}
+
+.navbar {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    backdrop-filter: blur(30px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--text-color);
+    z-index: 100;
+    padding: 1rem 7%;
+}
+
+
+
+
+
+
+
+
+
+.navbar-nav .nav-link {
+    font-family: "Sofia", sans-serif; 
+}
+
+
+#Brand{
+    font-size: 2rem;
+    color: var(--text-color);
+    font-weight: 600;
+    cursor:default;
+    font-family:"Sofia", sans-serif;
+    margin-left: 0;
+
+}
+
+section{
+    
+    padding: 10rem 9% 2rem;
+}
+
+
+.navbar a {
+    font-family: "Sofia", sans-serif;
+    margin-right: 20px;
+    font-size: 1rem;
+    color: var(--text-color);
+    margin-left: auto; 
+    position: relative; 
+    padding: 10px 0; 
+    text-decoration: none; 
+}
+
+
+.navbar a::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color:var(--text-color); 
+    bottom: -2px; 
+    left: 0;
+    transform: scaleX(0); 
+    transform-origin: bottom right; 
+    transition: transform 0.4s ease; 
+}
+
+
+.navbar a:hover::after {
+    transform: scaleX(1); 
+    transform-origin: bottom left; 
+}
+
+
+.navbar-nav .nav-link.active {
+    color: inherit;
+}
+.home{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: -80px;
+    padding-top: 0;
+
+}
+
+.home .container{
+    margin-top: 140px;
+}
+
+.home-img img{
+    width: 600px;
+    max-width: 100%;
+    height: auto;
+    margin-top: -10px; 
+    padding-top: 0;
+    object-fit: cover;
+    z-index: 1;
+    position: relative;
+}
+
+
+.home-content h3{
+    font-size: 3.6 rem;
+    font-weight: 700;
+}
+
+.hi{
+    margin-top: 170px;
+}
+
+.home-content h1{
+    font-size: 3.6rem;
+    font-weight: 700;
+    line-height: 1.3;
+}
+
+.home-content p{
+    font-size: 1.6rem;
+}
+ .social-media a{
+    display: inline;
+    justify-content: center;
+    align-items: center;
+    width: 4rem;
+    height: 4rem;
+    background: transparent;
+    font-size: 2rem;
+    color: var(--text-color);
+ }
+ .navbar-toggler {
+    background-color: white;
+    border: 1px solid #ccc; 
+}
+.navbar-nav .nav-link:hover {
+    color: inherit;
+}
+
+.btn{
+    color: var(--text-color);
+    border:solid var(--text-color);
+    z-index: 2;
+    position: relative;
+}
+.btn:hover{
+    color: var(--bg-color);
+    background-color: var(--text-color);
+    box-shadow: 0 0 5px var(--text-color),0 0 25px var(--text-color),0 0 50px var(--text-color),0 0 100px var(--text-color),
+    0 0 200px var(--text-color);
+    z-index: 2;
+    position: relative;
+
+}
+
+
+
+
+
+
+.about{
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(10, 10, 10);
+    height: auto;
+    width: auto;
+    font-size: 1.3rem;
+    display: flex;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+.heading{
+    text-align: center;
+}
+.show{
+    opacity: 1;
+    filter: blur();
+}
+
+.about p{
+    line-height: 2;
+}
+
+
+.rotating-square {
+    width: 50px;
+    height: 50px;
+    background-color:var(--text-color); 
+    position: relative; 
+    top: 26px; 
+    left: -3px; 
+    animation: rotate 4s linear infinite; 
+    border: 2px solid var(--text-color); 
+}
+.rotating-square2 {
+    width: 30px; 
+    height: 30px;
+    background-color:var(--text-color); 
+    position: relative; 
+    margin-top: -18px; 
+    margin-left: auto;
+    margin-right: 6px; 
+    animation: rotate 4s linear infinite;
+    border: 2px solid var(--text-color); 
+}
+
+/* Rotating Animation */
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    10%{
+        transform: rotate(90deg);
+    }
+    20%{
+        transform: rotate(90deg);
+    }
+    30%{
+        transform: rotate(180deg);
+    }
+    40%{
+        transform: rotate(180deg);
+    }
+    50%{
+        transform: rotate(180deg);
+    }
+    60%{
+        transform: scale(0.5)rotate(180deg);
+    }
+    70%{
+        transform: scale(0.5)rotate(180deg);
+    }
+
+    90%{
+        transform: scale(1)rotate(0deg);
+    }
+    100%{
+        transform: scale(1)rotate(0deg);
+    }
+    
+}
+
+
+
+
+
+
+
+
+.progress-bar {
+    width: 0; /* Initial state */
+    height: 100%;
+    background-color: var(--text-color);
+    transition: width 2s ease-in-out; /* Smooth transition */
+}
+
+.progress-bar.animate {
+    width: var(--width); /* Width will be set dynamically */
+}
+
+
+.progress {
+    height: 15px;
+    margin-bottom: 45px;
+    background-color: var(--primary-color);
+
+}
+
+
+
+
+
+
+
+
+
+
+.footer{
+    color: var(--text-color);
+    background-color: var(--bg-color);
+}
+.footer ul li a {
+    color: var(--text-color); 
+}
+
+
+
+
+
+
+
+
+
+
+#about-heading {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #fff; 
+    text-align: center;
+}
+
+.about {
+    background-color: var(--bg-color);
+    border: 4px dotted var(--text-color); 
+
+}
+
+
+.about p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #ddd; 
+    text-align: justify;
+}
+
+.about p strong {
+    color: #fff; 
+}
+
+
+@media (max-width: 768px) {
+    #about-heading {
+        font-size: 2rem;
+    }
+    .about p {
+        font-size: 1rem;
+    }
+}
+
+
+
+
+
+
+
+form {
+    background-color: var(--bg-color); 
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 800px;
+    margin: auto;
+}
+
+
+input[type="text"], input[type="email"], textarea {
+    background-color: var(--text-color); 
+    color: var(--bg-color); 
+    border: 1px solid var(--text-color);
+    border-radius: 4px;
+    padding: 10px;
+    width: 100%;
+    margin-bottom: 15px;
+    font-size: 16px;
+}
+textarea{
+    max-height: 200px;
+}
+
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: var(--text-color); 
+}
+
+.imagess{
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.service-box {
+    transition: transform 0.3s ease, box-shadow 0.3s ease; 
+  }
+  
+  .service-box:hover {
+    transform: translateY(-25px); 
+  }
